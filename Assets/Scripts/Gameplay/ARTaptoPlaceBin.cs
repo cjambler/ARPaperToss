@@ -21,6 +21,7 @@ public class ARTaptoPlaceBin : MonoBehaviour
 
 
     static bool condition;
+    [SerializeField] private GameObject groundPlaneVisualizer;
 
     // Start is called before the first frame update
     void Awake()
@@ -50,7 +51,7 @@ public class ARTaptoPlaceBin : MonoBehaviour
     {
         if (!TryGetTouchPosition(out Vector2 touchPosition)) return;
 
-        if (raycastManager.Raycast(touchPosition, raycastHits, TrackableType.PlaneWithinPolygon))
+        if (raycastManager.Raycast(touchPosition, raycastHits, TrackableType.PlaneWithinPolygon) && !binInScene)
         {
             var hitPose = raycastHits[0].pose;
 
@@ -60,6 +61,9 @@ public class ARTaptoPlaceBin : MonoBehaviour
             binInScene = true;
             condition = binInScene;
         }
+
+        if (!binInScene) groundPlaneVisualizer.SetActive(true);
+        else groundPlaneVisualizer.SetActive(false);
     }
 
     public void PlaceOrMoveBin() 

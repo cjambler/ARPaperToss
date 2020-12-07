@@ -59,4 +59,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxAngle: 360
-  minAngle: 0
+  minAngle: -360
+  randomizationTimeInterval: 30

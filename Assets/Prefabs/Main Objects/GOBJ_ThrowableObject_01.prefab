@@ -135,6 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1055129496667822069}
   - component: {fileID: 4623139391168340127}
+  - component: {fileID: 2683837563043357277}
   m_Layer: 0
   m_Name: GOBJ_ThrowableObject_01
   m_TagString: object
@@ -173,3 +174,20 @@ MonoBehaviour:
   tossMeTransform: {fileID: 5952968145277212389}
   throwForceMultiplierXY: 1
   throwForceMultiplierZ: 20
+--- !u!114 &2683837563043357277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6522653891471239181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2b343f3aaa84348b73eafef2fe7cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: {fileID: 0}
+  goal: {fileID: 0}
+  distance: 0
+  goalTag: goal
+  startTag: object

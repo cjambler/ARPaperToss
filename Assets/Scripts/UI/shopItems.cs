@@ -6,6 +6,8 @@ using UnityEngine.Analytics;
 public class shopItems : MonoBehaviour
 {
     private int currentCoinCount;
+    private List<string> unlockedObjects = new List<string>();
+    private List<string> unlockableObjects = new List<string>();
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +17,8 @@ public class shopItems : MonoBehaviour
 
     public void BuyItem(int itemPrice, string itemName) 
     {
+        currentCoinCount = PlayerPrefs.GetInt("Currency", 0); 
+
         if (currentCoinCount >= itemPrice) 
         {
             Debug.Log("Item Bought");
@@ -32,5 +36,10 @@ public class shopItems : MonoBehaviour
         {
             Debug.Log("Not Enough Coins");
         }
+    }
+
+    private void GetAllCurrentUnlockedObjects() 
+    {
+        
     }
 }

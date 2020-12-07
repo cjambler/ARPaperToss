@@ -87,9 +87,10 @@ public class calculateScores : MonoBehaviour
     {
         Analytics.CustomEvent("Session Streak", new Dictionary<string, object> {
             { "Total Score", currentScore },
-            { "Current Streak", currentStreak }
+            { "Current Streak", currentStreak },
+            {"Time Elapsed in Session", Time.timeSinceLevelLoad}
         });
-        
+
         currentStreak = defaultStreak;
         currentScore = defaultScore;
     }

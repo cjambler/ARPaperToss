@@ -34,7 +34,7 @@ public class playerInputActions : MonoBehaviour
     
     void Update()
     {
-        PlayerActions();
+        if (ARTaptoPlaceBin.GoalIsPlaced()) PlayerActions();
     }
 
     private void PlayerActions() 

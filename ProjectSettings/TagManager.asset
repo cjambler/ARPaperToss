@@ -6,6 +6,7 @@ TagManager:
   tags:
   - floor
   - goal
+  - object
   layers:
   - Default
   - TransparentFX
